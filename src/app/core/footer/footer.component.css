@@ -1,0 +1,32 @@
+footer {
+  background: rgb(255, 255, 255);
+  margin-top: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 3px;
+}
+
+footer ul li {
+  border-bottom: ridge;
+  list-style: none;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  margin-left: 15px;
+  position: relative;
+  display: inline;
+}
+
+footer p {
+  padding-left: 20px;
+  padding-top: 35px;
+  font-size: medium;
+}
+
+footer span {
+  font-size: 1.5em;
+}
+
+li {
+  cursor: pointer;
+}

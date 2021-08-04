@@ -1,0 +1,22 @@
+<header>
+  <div class="navbar-wrap">
+    <div>
+      <ul id="nav">
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/for-rent">For Rent</a></li>
+        <li><a routerLink="/apartments">Apartments</a></li>
+      </ul>
+
+      <ul *ngIf="!isAuth">
+        <li id="login"><a routerLink="/login">Login</a></li>
+        <li id="register"><a routerLink="/register">Register</a></li>
+      </ul>
+
+      <ul *ngIf="isAuth">
+        <li id="profile"><a routerLink="/profile">Pishi's profile</a></li>
+        <li id="logout"><a>Logout</a></li>
+      </ul>
+    </div>
+
+  </div>
+</header>

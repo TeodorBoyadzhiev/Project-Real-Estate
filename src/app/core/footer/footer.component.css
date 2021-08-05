@@ -2,9 +2,10 @@ footer {
   background: rgb(255, 255, 255);
   margin-top: 1em;
   position: absolute;
-  bottom: 0;
+  bottom: 10;
   width: 100%;
   box-shadow: 0 0 3px;
+  top: 90%;
 }
 
 footer ul li {
@@ -19,7 +20,7 @@ footer ul li {
 
 footer p {
   padding-left: 20px;
-  padding-top: 35px;
+  padding-top: 20px;
   font-size: medium;
 }
 

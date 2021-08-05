@@ -1,1 +1,49 @@
-<p>login works!</p>
+<div>
+  <form>
+    <fieldset class="box">
+      <h2>Login Form</h2>
+      <div class="inputGroup">
+        <p class="field">
+          <label for="email"><span>Email: </span></label>
+          <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+        </p>
+
+        <!-- <ng-container *ngIf="emailInput.touched">
+        <p *ngIf=" emailInput.errors?.required" class="error">
+          Email is required!
+        </p>
+        <p *ngIf="emailInput.errors?.invalidEmail" class="error">
+          Email is not valid!
+        </p>
+      </ng-container> -->
+
+        <p class="field">
+          <label for="password"><span>Password: </span></label>
+          <input type="password" name="password" id="password" placeholder="******">
+        </p>
+
+
+        <!-- <ng-container *ngIf="passwordInput.touched">
+        <p *ngIf="passwordInput.errors?.required" class="error">
+          Password is required!
+        </p>
+        <p *ngIf="passwordInput.errors?.minlength" class="error">
+          Password must be at least 4 characters!
+        </p>
+      </ng-container> -->
+      </div>
+
+      <button class="btn">Login</button>
+
+      <p class="text-center">
+        Have an account?
+        <a routerLink="/register">Register</a>
+      </p>
+
+
+
+
+
+    </fieldset>
+  </form>
+</div>

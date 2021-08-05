@@ -1,0 +1,53 @@
+
+.box{
+    width: 380px;
+    height: 350px;
+    position: relative;
+    margin: 3%auto;
+}
+
+/* .inputGroup{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+} */
+
+.field{
+    width: 100%;
+    padding: 20px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background: transparent;
+}
+.email{
+    height: auto;
+}
+
+.btn{
+    width: 25%;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    border-bottom: 2px solid #999;
+    top: 100%;
+    background-color:white;  
+}
+
+.btn:hover{
+    background-color: gray;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+
+
+
+
+

@@ -1,12 +1,12 @@
 <div>
   <form>
+    <h2>Login Form</h2>
     <fieldset class="box">
-      <h2>Login Form</h2>
       <div class="inputGroup">
-        <p class="field">
-          <label for="email"><span>Email: </span></label>
-          <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
-        </p>
+
+        <label for="email"><span>Email: </span></label>
+        <input class="field" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+
 
         <!-- <ng-container *ngIf="emailInput.touched">
         <p *ngIf=" emailInput.errors?.required" class="error">
@@ -17,10 +17,10 @@
         </p>
       </ng-container> -->
 
-        <p class="field">
-          <label for="password"><span>Password: </span></label>
-          <input type="password" name="password" id="password" placeholder="******">
-        </p>
+
+        <label for="password"><span>Password: </span></label>
+        <input class="field" type="password" name="password" id="password" placeholder="******">
+
 
 
         <!-- <ng-container *ngIf="passwordInput.touched">
@@ -36,7 +36,7 @@
       <button class="btn">Login</button>
 
       <p class="text-center">
-        Have an account?
+       Don't have an account?
         <a routerLink="/register">Register</a>
       </p>
 

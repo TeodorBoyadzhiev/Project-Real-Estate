@@ -10,52 +10,54 @@ header li {
   padding-left: 45px;
 }
 
-header li a{
-    color: #333;
-    text-decoration: none;
-    padding: 13px;
-    transition: .3s ease;
+header li a {
+  color: #333;
+  text-decoration: none;
+  padding: 13px;
+  transition: .3s ease;
 }
 
-li a:hover {
-  background-color:gray;
+header li a:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 30px; 
+}
+
+#nav {
+  float: left;
+  position: relative;
+  top: -17px;
+}
+
+header ul #login a {
+  color: white;
+  background-color: #4CAF50;
   border-radius: 30px;
+  float: right;
+  position: relative;
+  top: -12px;
+  transition: .3s ease;
 }
 
-#nav{
-float: left;
-position: relative;
-top: -17px;
+header ul #register a {
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 30px;
+  float: right;
+  position: relative;
+  top: -12px;
+  transition: .3s ease;
 }
 
-header ul #login a{
-    color: white;
-    background-color: royalblue;
-    border-radius: 30px;
-    float: right;
-    position: relative;
-    top: -12px;
-    transition: .3s ease;
+header ul #login a:hover {
+  border-radius: 0;
+  
 }
 
-header ul #register a{
-    color: white;
-    background-color: royalblue;
-    border-radius: 30px;
-    float: right;
-    position: relative;
-    top: -12px;
-    transition: .3s ease;
-}
-
-header ul #login a:hover{
-    border-radius: 0;
-}
-header ul #register a:hover{
-    border-radius: 0;
+header ul #register a:hover {
+  border-radius: 0;
 }
 
 
-li{
+li {
   cursor: pointer;
 }

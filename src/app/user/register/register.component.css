@@ -1,0 +1,54 @@
+.registerForm {
+  bottom: 30px;
+  position: absolute;
+  width: 280px;
+}
+
+
+.fieldset {
+  width: 380px;
+  height: 430px;
+  border: 2px solid #999;
+  border-radius: 30px;
+  position: relative;
+  margin: 3%auto;
+}
+
+.registerForm {
+  width: 380px;
+  height: 350px;
+  position: relative;
+  margin: 3%auto;
+}
+
+.field {
+  width: 100%;
+  padding: 20px 0;
+  margin: 10px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.btn {
+  width: 30%;
+  padding: 15px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: 0;
+  border-bottom: 2px solid #999;
+  top: 100%;
+  background-color: white;
+
+}
+
+.btn:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 30px;
+  transition: .3s;
+  font-size: medium;
+}

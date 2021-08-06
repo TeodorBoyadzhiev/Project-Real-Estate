@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ApartmentsModule } from './apartments/apartments.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     CoreModule,
     UserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ApartmentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,10 +4,16 @@
 
 
  .img-container {
-   height: 500px;
-   width: 900px;
+   width: 840px;
+   height: 420px;
    position: relative;
    float: left;
+   margin-left: 50px;
+ }
+
+ .img{
+   width: 900px;
+   height: 450px;
  }
 
 

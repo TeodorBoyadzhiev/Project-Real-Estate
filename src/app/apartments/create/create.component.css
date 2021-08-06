@@ -11,9 +11,11 @@
 
 .fieldset {
   width: 380px;
-  height: 520px;
-  border: 2px solid #999;
+  height: 465px;
+  border: 5px solid #999;
   border-radius: 30px;
+  background-color: hsla(0, 0%, 94.1%, .8);
+  box-shadow: 0 0 1em 0 #000;
   position: relative;
   margin: 3%auto;
 }
@@ -32,7 +34,7 @@
 
 .btn {
   width: 30%;
-  padding: 15px 30px;
+  padding: 15px 25px;
   cursor: pointer;
   display: block;
   margin: auto;
@@ -40,6 +42,7 @@
   border-bottom: 2px solid #999;
   top: 100%;
   background-color: white;
+  
 
 }
 
@@ -48,4 +51,9 @@
   border-radius: 30px;
   transition: .3s;
   font-size: medium;
+}
+
+
+.checkbox{
+  margin: 15px;
 }

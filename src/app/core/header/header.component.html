@@ -3,19 +3,18 @@
     <div>
       <ul id="nav">
         <li><a type="button" routerLink="/home">Home</a></li>
-        <li><a type="button" routerLink="/for-rent">For Rent</a></li>
         <li><a type="button" routerLink="/apartments">Apartments</a></li>
         <li><a type="button" routerLink="/create">Create</a></li>
       </ul>
 
-      <ul *ngIf="!isAuth">
-        <li id="login"><a type="button" routerLink="/login">Login</a></li>
-        <li id="register"><a type="button" routerLink="/register">Register</a></li>
+      <ul id="authBtn">
+        <li><a type="button" routerLink="/login">Login</a></li>
+        <li><a type="button" routerLink="/register">Register</a></li>
       </ul>
 
-      <ul *ngIf="isAuth">
-        <li id="profile"><a type="button" routerLink="/profile">Pishi's profile</a></li>
-        <li id="logout"><a type="button">Logout</a></li>
+      <ul id="authBtn">
+        <li class="logout"><a type="button">Logout</a></li>
+        <li><a type="button" routerLink="/profile">Pishi's profile</a></li>
       </ul>
     </div>
 

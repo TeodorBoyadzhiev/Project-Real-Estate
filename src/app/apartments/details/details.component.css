@@ -9,7 +9,6 @@
 
 .apartment {
   display: inline-block;
-  height: 440px;
   border: 1px solid #2b415433;
   background: white;
   margin: 20px;
@@ -21,7 +20,7 @@
   height: 260px;
 }
 
-.btn{
+.btn {
   color: #333;
   text-decoration: none;
   padding: 13px;
@@ -29,11 +28,11 @@
   transition: .3s ease;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgb(216, 216, 216);
   border-radius: 30px;
 }
 
-.items{
+.items {
   text-align: left;
 }

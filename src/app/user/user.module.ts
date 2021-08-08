@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserRoutingModule } from './user-routing.module';
 import { ProfileComponent } from './profile/profile.component';
+import { UserService } from './user.service';
 
 
 
@@ -16,6 +17,9 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [
     CommonModule,
     UserRoutingModule
+  ],
+  providers: [
+    UserService
   ]
 })
 export class UserModule { }

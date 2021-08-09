@@ -1,4 +1,4 @@
-export interface Iapartment{
+export interface IApartment{
     description: String,
     location: String,
     price: Number,

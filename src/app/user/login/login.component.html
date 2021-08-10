@@ -23,8 +23,6 @@
         <input #passwordInput="ngModel" ngModel class="field" type="password" name="password" id="password"
           placeholder="******" [minlength]="4" required>
 
-
-
         <ng-container *ngIf="passwordInput.touched">
           <p *ngIf="passwordInput.errors?.required" class="error">
             Password is required!

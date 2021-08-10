@@ -3,6 +3,4 @@ export interface IApartment{
     location: String,
     price: Number,
     imageUrl: String,
-    rent: boolean,
-    sale:boolean
 };

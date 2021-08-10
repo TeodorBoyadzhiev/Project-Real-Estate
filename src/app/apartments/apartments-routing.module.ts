@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthActivate } from '../core/guards/auth.activate';
 import { CatalogComponent } from './catalog/catalog.component';
 import { CreateComponent } from './create/create.component';
 import { DetailsComponent } from './details/details.component';
@@ -26,7 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'create',
-    component: CreateComponent
+    component: CreateComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: true,
+      authenticationFailureRedirectUrl: '/login'
+    }
   },
 
 

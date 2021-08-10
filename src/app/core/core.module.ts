@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { appInterceptorProviders } from './app-interceptor';
+import { AuthActivate } from './guards/auth.activate';
 
 
 
@@ -22,7 +23,8 @@ import { appInterceptorProviders } from './app-interceptor';
     FooterComponent
   ],
   providers: [
-    appInterceptorProviders
+    appInterceptorProviders,
+    AuthActivate
   ]
 })
 export class CoreModule { }

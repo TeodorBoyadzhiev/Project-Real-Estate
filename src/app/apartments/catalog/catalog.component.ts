@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ContentService } from 'src/app/content.service';
-import { IApartment } from 'src/app/shared/interfaces';
+import { ContentService } from '../../content.service';
+import { IApartment } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-catalog',

@@ -22,9 +22,14 @@ export class ContentService {
     return this.http.get<IApartment[]>(`/api/apartments`);
   }
 
-  saveApartment(data: { description: string, location: string, price: number, imageUrl: string }) {
-    console.log(data)
+  saveApartment(data: { description: string; location: string; price: number; imageUrl: string }) {
     return this.http.post<IApartment>(`/api/apartments`, data);
+  }
+
+  
+  editApartment(data: { description: string; location: string; price: number, imageUrl: string; }, id: string) {
+    return this.http.put<IApartment>(`/api/apartments/${id}`, data).pipe(
+      tap((apartment) => this.apartment = apartment))
   }
 
 }

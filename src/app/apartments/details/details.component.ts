@@ -16,6 +16,7 @@ export class DetailsComponent{
     private contentService: ContentService,
     private activatedRoute: ActivatedRoute
   ) {
+    console.log(this.apartment)
     this.fetchApartment();
   }
 

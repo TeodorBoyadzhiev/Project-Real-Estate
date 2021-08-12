@@ -5,25 +5,22 @@
 
         <div class="apartment">
 
-          <img class="img" src="../../../assets/img1.jpg">
-          <p class="description">Opisanie...</p>
+          <img class="img" src="{{apartment!.imageUrl}}">
+          <p class="description">{{apartment!.description}}</p>
           <ul class="items">
-            <li><span>Location: </span>Sofia</li>
-            <li><span>Price: </span>50 000</li>
+            <li><span>Location: </span>{{apartment!.location}}</li>
+            <li><span>Price: </span>{{apartment!.price}}</li>
           </ul>
 
           <button routerLink="/apartments" class="btn">Back</button>
+          <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
+
           <!-- if for rent && not owener -->
           <button class="btn">Rent it</button>
-
-          <!-- if for sale && not owener -->
-          <button class="btn">Buy it</button>
 
           <!-- if rented == true  -->
           <p>This apartment is already rented!</p>
 
-          <!-- if bоught == true -->
-          <p>This apartment is already bought!</p>
         </div>
 
       </div>

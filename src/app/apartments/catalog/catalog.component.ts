@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContentService } from '../../content.service';
+import { ContentService } from '../../core/services/content.service';
 import { IApartment } from '../../shared/interfaces';
 
 @Component({
@@ -13,7 +13,9 @@ export class CatalogComponent {
 
   constructor(
     private contentService: ContentService
-  ) { }
+  ) {
+    this.fetchApartments();
+   }
 
   fetchApartments(): void {
     this.apartments = undefined;

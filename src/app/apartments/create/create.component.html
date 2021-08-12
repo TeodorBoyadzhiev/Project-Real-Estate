@@ -43,19 +43,19 @@
             Price is required!
           </p>
           <p *ngIf=" priceInput.errors?.minlength" class="error">
-            Price should be bigger than 100$!
+            Price should be more than 100$!
           </p>
         </ng-container>
 
         <label for="imageUrl"><span>ImageUrl: </span></label>
-        <input #imageUrl="ngModel" ngModel class="field" type="text"
+        <input #imageUrlInput="ngModel" ngModel class="field" type="text"
          name="imageUrl" placeholder="ImageUrl"  required >  
 
-        <ng-container *ngIf="imageUrl.touched">
-          <p *ngIf=" imageUrl.errors?.required" class="error">
+        <ng-container *ngIf="imageUrlInput.touched">
+          <p *ngIf=" imageUrlInput.errors?.required" class="error">
             ImageUrl is required!
           </p>
-          <p *ngIf="imageUrl.errors?.pattern" class="error">
+          <p *ngIf="imageUrlInput.errors?.pattern" class="error">
             ImageUrl is invalid!
           </p>
         </ng-container>

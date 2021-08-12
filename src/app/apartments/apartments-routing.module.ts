@@ -10,20 +10,9 @@ import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
-    path: 'apartments',
-    children: [{
-      path: '',
-      pathMatch: 'full',
-      component: CatalogComponent
-    },
-    {
-      path: 'edit/:apartmentId',
-      component: EditComponent
-    },
-    {
-      path: 'details/:apartmentId',
-      component: DetailsComponent
-    }]
+    path: '',
+    pathMatch: 'full',
+    component: CatalogComponent
   },
   {
     path: 'create',
@@ -31,15 +20,25 @@ const routes: Routes = [
     canActivate: [AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: '/login'
+      authenticationFailureRedirectUrl: 'user/login'
     }
   },
+  {
+    path: ':apartmentId',
+    component: DetailsComponent
+  },
+  {
+    path: 'edit/:apartmentId',
+    component: EditComponent
+  }
+  
 
 
-];
+]
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 

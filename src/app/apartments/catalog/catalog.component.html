@@ -1,54 +1,19 @@
-<div class="img-container">
+<div class="img-container" *ngIf="apartments">
   <main>
-    <div class="apartments-content">
-      <div class="aparments-wraper">  
+    <div class="apartments-content" *ngFor="let apartment of apartments">
+      <div class="aparments-wraper">
 
         <div class="apartment">
 
-          <img class="img" src="../../../assets/img1.jpg">
-          <p class="description">Opisanie...</p>
+          <img class="img" src="{{apartment.imageUrl}}">
+          <p class="description">{{apartment.description}}</p>
           <ul class="items">
-            <li><span>Location: </span>Sofia</li>
-            <li><span>Price: </span>50 000</li>
+            <li><span>Location: </span>{{apartment.location}}</li>
+            <li><span>Price: </span>{{apartment.price}}</li>
           </ul>
 
-          <button routerLink="details/:apartmentId" class="btn">Details</button>
-          <!-- if rented == false -->
-          <button routerLink="edit/:apartmentId" class="btn">Edit</button>
-
+          <button routerLink="{{apartment._id}}" class="btn">Details</button>
         </div>
-
-        <div class="apartment">
-
-          <img class="img" src="../../../assets/img2.jpg">
-          <p class="description">Opisanie...</p>
-          <ul class="items">
-            <li><span>Location: </span>Sofia</li>
-            <li><span>Price: </span>50 000</li>
-          </ul>
-
-          <button routerLink="details/:apartmentId" class="btn">Details</button>
-          <!-- if rented == false -->
-          <button routerLink="edit/:apartmentId" class="btn">Edit</button>
-
-        </div>
-
-        <div class="apartment">
-
-          <img class="img" src="../../../assets/logo2.jpg">
-          <p class="description">Opisanie...</p>
-          <ul class="items">
-            <li><span>Location: </span>Sofia</li>
-            <li><span>Price: </span>50 000</li>
-          </ul>
-
-          <button routerLink="details/:apartmentId" class="btn">Details</button>
-          <!-- if rented == false -->
-          <button routerLink="edit/:apartmentId" class="btn">Edit</button>
-
-        </div>
-
-
       </div>
     </div>
   </main>

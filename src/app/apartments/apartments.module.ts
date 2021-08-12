@@ -5,7 +5,7 @@ import { CreateComponent } from './create/create.component';
 import { ApartmentsRoutingModule } from './apartments-routing.module';
 import { EditComponent } from './edit/edit.component';
 import { DetailsComponent } from './details/details.component';
-import { ContentService } from '../content.service';
+import { ContentService } from '../core/services/content.service';
 import { FormsModule } from '@angular/forms';
 
 

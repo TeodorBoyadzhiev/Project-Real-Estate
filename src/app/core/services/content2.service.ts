@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IApartment } from './shared/interfaces';
+import { IApartment } from '../../shared/interfaces';
 
 @Injectable()
 export class ContentService {
 
-  hasError!: boolean;
+
 
   constructor(private http: HttpClient) { }
 

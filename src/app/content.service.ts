@@ -5,7 +5,7 @@ import { IApartment } from './shared/interfaces';
 @Injectable()
 export class ContentService {
 
-
+  hasError!: boolean;
 
   constructor(private http: HttpClient) { }
 

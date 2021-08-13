@@ -5,7 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { appInterceptorProviders } from './app-interceptor';
 import { AuthActivate } from './guards/auth.activate';
-import { UserService } from './services/user2.service';
+import { UserService } from './services/user.service';
 
 
 

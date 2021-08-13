@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { sameValueAsFactory } from 'src/app/shared/validators';
-import { UserService } from '../../core/services/user2.service';
+import { UserService } from '../../core/services/user.service';
 
 @Component({
   selector: 'app-register',

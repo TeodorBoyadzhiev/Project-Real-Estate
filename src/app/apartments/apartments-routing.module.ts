@@ -25,11 +25,21 @@ const routes: Routes = [
   },
   {
     path: ':apartmentId',
-    component: DetailsComponent
+    component: DetailsComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: true,
+      authenticationFailureRedirectUrl: 'user/login'
+    }
   },
   {
     path: 'edit/:apartmentId',
-    component: EditComponent
+    component: EditComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: true,
+      authenticationFailureRedirectUrl: 'user/login'
+    }
   }
   
 

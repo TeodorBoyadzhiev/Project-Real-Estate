@@ -1,5 +1,6 @@
-.apartments-content {
-  display: flex;
+
+.img-container {
+  display: inline-block;
   flex-direction: row;
   width: 100%;
   margin: 15px;

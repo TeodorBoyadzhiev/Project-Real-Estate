@@ -34,11 +34,17 @@ export class UserService {
       tap((user) => this.user = user)
     );
   }
+  
+  updateProfile(data: { username: string; email: string; tel: string; }) {
+    return this.http.put<IUser>(`/api/users/profile`, data).pipe(
+      tap((user) => this.user = user)
+    );
+  }
 
 
   logout() {
     return this.http.post<IUser>(`/api/logout`, {}).pipe(
-      tap((user)=> this.user = null))
+      tap((user) => this.user = null))
   }
 
 

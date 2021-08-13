@@ -1,6 +1,6 @@
 .box {
   width: 380px;
-  height: 280px;
+  height: auto;
   border: 5px solid #999;
   border-radius: 30px;
   background-color: hsla(0, 0%, 94.1%, .8);

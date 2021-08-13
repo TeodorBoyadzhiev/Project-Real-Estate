@@ -32,4 +32,9 @@ export class ContentService {
       tap((apartment) => this.apartment = apartment))
   }
 
+  deleteApartment(id:string) {
+    return this.http.delete<IApartment>(`/api/apartments/${id}`)
+  
+  }
+
 }

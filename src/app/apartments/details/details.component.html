@@ -13,13 +13,17 @@
           </ul>
 
           <button routerLink="/apartments" class="btn">Back</button>
-          <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
 
-          <!-- if for rent && not owener -->
-          <button class="btn">Rent it</button>
+          <ng-container *ngIf="isOwner">
+            <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
+          </ng-container>
+          <ng-container *ngIf="!isOwner">
+            <!-- if for rent && not owener -->
+            <button class="btn">Rent it</button>
 
-          <!-- if rented == true  -->
-          <p>This apartment is already rented!</p>
+            <!-- if rented == true  -->
+            <p>This apartment is already rented!</p>
+          </ng-container>
 
         </div>
 

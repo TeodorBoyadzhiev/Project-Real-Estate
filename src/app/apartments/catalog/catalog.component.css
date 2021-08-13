@@ -1,7 +1,9 @@
-
-.img-container {
-  display: inline-block;
+.wrapper{
+  display:flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex: 100px;
+  margin-left: 100px;
   width: 100%;
   margin: 15px;
   margin-left: 100px;
@@ -10,7 +12,6 @@
 
 .apartment {
   display: inline-block;
-  height: 440px;
   border: 1px solid #2b415433;
   background: white;
   margin: 20px;

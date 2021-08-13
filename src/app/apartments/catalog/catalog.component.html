@@ -1,7 +1,7 @@
-<div class="img-container" *ngIf="apartments">
-  <main>
+<div id="img-container" *ngIf="apartments">
+  <main class="wrapper">
     <div class="apartments-content" *ngFor="let apartment of apartments">
-      <div class="aparments-wraper">
+      
 
         <div class="apartment">
 
@@ -14,7 +14,7 @@
 
           <button routerLink="{{apartment._id}}" class="btn">Details</button>
         </div>
-      </div>
+      
     </div>
   </main>
 </div>

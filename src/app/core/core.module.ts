@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { appInterceptorProviders } from './app-interceptor';
 import { AuthActivate } from './guards/auth.activate';
 import { UserService } from './services/user.service';
+import { ContentService } from './services/content.service';
 
 
 
@@ -24,9 +25,10 @@ import { UserService } from './services/user.service';
     FooterComponent
   ],
   providers: [
-    appInterceptorProviders,
     AuthActivate,
-    UserService
+    appInterceptorProviders,
+    UserService,
+    ContentService
   ]
 })
 export class CoreModule { }

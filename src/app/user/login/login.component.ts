@@ -10,6 +10,8 @@ import { UserService } from '../../core/services/user.service';
 })
 export class LoginComponent  {
 
+ 
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,

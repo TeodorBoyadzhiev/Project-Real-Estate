@@ -7,6 +7,7 @@ import { EditComponent } from './edit/edit.component';
 import { DetailsComponent } from './details/details.component';
 import { ContentService } from '../core/services/content.service';
 import { FormsModule } from '@angular/forms';
+import { CommentsComponent } from './comments/comments.component';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     CatalogComponent,
     CreateComponent,
     EditComponent,
-    DetailsComponent
+    DetailsComponent,
+    CommentsComponent
   ],
   imports: [
     CommonModule,

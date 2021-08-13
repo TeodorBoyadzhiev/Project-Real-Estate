@@ -3,6 +3,7 @@ export interface IApartment {
     location: String,
     price: Number,
     imageUrl: String,
+    comments: any[],
     userId: {
         username: String,
         email: String,

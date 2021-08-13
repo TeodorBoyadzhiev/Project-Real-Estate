@@ -12,6 +12,7 @@
 
 .apartment {
   display: inline-block;
+  height: 425px;
   border: 1px solid #2b415433;
   background: white;
   margin: 20px;
@@ -39,3 +40,4 @@
 .items{
   text-align: left;
 }
+

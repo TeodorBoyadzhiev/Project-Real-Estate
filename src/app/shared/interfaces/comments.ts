@@ -1,5 +1,5 @@
 export interface IComment {
-    text: String,
+    comment: String,
     userId: {
         username: String,
         email: String,

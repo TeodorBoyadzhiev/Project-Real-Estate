@@ -17,8 +17,6 @@ export class DetailsComponent{
     return this.apartment?.userId === this.userService.user?._id
   }
 
-
-
   constructor(
     private contentService: ContentService,
     private userService: UserService,

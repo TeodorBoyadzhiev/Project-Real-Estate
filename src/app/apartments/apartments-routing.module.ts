@@ -5,6 +5,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { CreateComponent } from './create/create.component';
 import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
 
 
 
@@ -40,9 +41,17 @@ const routes: Routes = [
       authenticationRequired: true,
       authenticationFailureRedirectUrl: 'user/login'
     }
-  }
-  
+  },
+  {
+    path: 'comment/:apartmentId',
+    component: NewCommentComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: true,
+      authenticationFailureRedirectUrl: 'user/login'
+    }
 
+  }
 
 ]
 

@@ -16,8 +16,12 @@
 
           <ng-container *ngIf="isOwner">
             <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
+            <button routerLink="/apartments/comment/{{apartment!._id}}" class="btn">New Comment</button>
+
           </ng-container>
           <ng-container *ngIf="!isOwner">
+            <button routerLink="/apartments/comment/{{apartment!._id}}" class="btn">New Comment</button>
+
             <!-- if for rent && not owener -->
             <button class="btn">Rent it</button>
 

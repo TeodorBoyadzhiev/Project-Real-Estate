@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="create-border">
+    <form #form="ngForm" ngModel (ngSubmit)="createComment(form)">
+      <div class="create-title">
+        <h1>New Comment</h1>
+      </div>
+      <fieldset class="fieldset">
+        <label for="comment"><span>Comment: </span></label>
+        <textarea #commentInput="ngModel" ngModel class="field" type="text" name="comment" placeholder="Comment...">
+           </textarea>
+
+        <!-- <ng-container *ngIf="#commentInput.touched">
+            <p *ngIf=" #commentInput.errors?.required" class="error">
+              Description is required!
+            </p>
+            <p *ngIf=" #commentInput.errors?.minlength" class="error">
+              Description should be at least 5 characters long!
+            </p>
+          </ng-container> -->
+
+        <button class="btn">Comment</button>
+      </fieldset>
+    </form>
+
+  </div>
+</div>

@@ -7,7 +7,8 @@ import { EditComponent } from './edit/edit.component';
 import { DetailsComponent } from './details/details.component';
 import { ContentService } from '../core/services/content.service';
 import { FormsModule } from '@angular/forms';
-import { CommentsComponent } from './comments/comments.component';
+import { AsideComponent } from './comments/comments.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
 
 
 
@@ -17,7 +18,8 @@ import { CommentsComponent } from './comments/comments.component';
     CreateComponent,
     EditComponent,
     DetailsComponent,
-    CommentsComponent
+    AsideComponent,
+    NewCommentComponent
   ],
   imports: [
     CommonModule,

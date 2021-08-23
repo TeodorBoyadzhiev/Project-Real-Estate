@@ -8,6 +8,15 @@ footer {
   top: 100%;
 }
 
+/* footer {
+  bottom: 0;
+width: 100%;
+background-color: #2b3636;
+position: absolute;
+color: #bac1c7;
+padding: 39px 0 42px;
+}  PROBVAI!!!!!*/
+
 footer ul li {
   border-bottom: ridge;
   list-style: none;

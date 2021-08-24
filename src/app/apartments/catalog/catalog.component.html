@@ -1,20 +1,27 @@
 <div id="img-container" *ngIf="apartments">
   <main class="wrapper">
+
+    <div class="search-wraper">
+      <form action="" class="search">
+        <input type="search" class="search-input" placeholder="Find the best offer for you">
+        <input type="submit" class="search-submit" value="Search">
+      </form>
+    </div>
+
     <div class="apartments-content" *ngFor="let apartment of apartments">
-      
 
-        <div class="apartment">
+      <div class="apartment">
 
-          <img class="img" src="{{apartment.imageUrl}}">
-          <p class="description">{{apartment.description}}</p>
-          <ul class="items">
-            <li><span>Location: </span>{{apartment.location}}</li>
-            <li><span>Price: </span>{{apartment.price}}</li>
-          </ul>
+        <img class="img" src="{{apartment.imageUrl}}">
+        <p class="description">{{apartment.description}}</p>
+        <ul class="items">
+          <li><span>Location: </span>{{apartment.location}}</li>
+          <li><span>Price: </span>{{apartment.price}}</li>
+        </ul>
 
-          <button routerLink="{{apartment._id}}" class="btn">Details</button>
-        </div>
-      
+        <button routerLink="{{apartment._id}}" class="btn">Details</button>
+      </div>
+
     </div>
   </main>
 </div>

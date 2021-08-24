@@ -1,3 +1,8 @@
+.img-container {
+  min-height: calc(100vh -186px);
+
+}
+
 .apartments-content {
   display: flex;
   flex-direction: row;

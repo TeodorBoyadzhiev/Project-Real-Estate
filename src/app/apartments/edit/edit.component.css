@@ -1,3 +1,8 @@
+.container{
+  min-height: calc(100vh - 50px);
+  
+}
+
 .create-border {
     bottom: 30px;
     position: absolute;
@@ -11,13 +16,12 @@
   
   .fieldset {
     width: 380px;
-    height: 500px;
+    height: auto;
     border: 5px solid #999;
     border-radius: 30px;
     background-color: hsla(0, 0%, 94.1%, .8);
     box-shadow: 0 0 1em 0 #000;
-    position: relative;
-    margin: 3%auto;
+    
   }
   
   .field {

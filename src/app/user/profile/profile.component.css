@@ -1,3 +1,8 @@
+.container{
+  min-height: calc(100vh - 108px);
+}
+
+
 .profile {
   width: 100%;
   max-width: 500px;

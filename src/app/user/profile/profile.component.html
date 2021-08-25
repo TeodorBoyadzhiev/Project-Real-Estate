@@ -15,7 +15,7 @@
         <button class="green-button">Save</button>
       </form>
     </ng-container>
-    
+
     <ng-container *ngIf="!inUpdateMode">
       <h3>User Info:</h3>
       <div class="flex">
@@ -27,6 +27,45 @@
         <p>{{user!.email}}</p>
       </div>
       <button (click)="inUpdateMode = true" class="editBtn">Edit</button>
+    </ng-container>
+
+  </div>
+
+  <div class="user-rented">
+    <h1>Your choices:</h1>
+    <!-- // IF HAS RENTED APARTMETS -->
+    <ng-container>
+      <div class="apartment">
+        <img class="img" src="../../../assets/img2.jpg">
+        <p class="description">Blabla</p>
+        <ul class="items">
+          <li><span>Location: </span>Sofia</li>
+          <li><span>Price: </span>400$</li>
+        </ul>
+      </div>
+      <div class="apartment">
+        <img class="img" src="../../../assets/img2.jpg">
+        <p class="description">Blabla</p>
+        <ul class="items">
+          <li><span>Location: </span>Sofia</li>
+          <li><span>Price: </span>400$</li>
+        </ul>
+      </div>
+      <div class="apartment">
+        <img class="img" src="../../../assets/img2.jpg">
+        <p class="description">Blabla</p>
+        <ul class="items">
+          <li><span>Location: </span>Sofia</li>
+          <li><span>Price: </span>400$</li>
+        </ul>
+      </div>
+    </ng-container>
+
+    <ng-container>
+      <div class="empty">
+        No apartments yet. Start searching.
+      </div>
+      <button type="button" class="btn" routerLink="/apartments">Catalog</button>
     </ng-container>
   </div>
 </div>

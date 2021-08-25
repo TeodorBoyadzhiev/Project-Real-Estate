@@ -4,6 +4,8 @@
   width: 450px;
 } */
 
+
+
 .fieldset {
   width: 450px;
   height: auto;
@@ -13,6 +15,7 @@
   box-shadow: 0 0 1em 0 #000;
   position: relative;
   margin: 20px 170px auto 100px;
+  text-align: left;
 
 }
 
@@ -43,4 +46,8 @@ div h3 {
   border-radius: 30px;
   transition: .3s;
   font-size: medium;
+}
+
+.username {
+  color: #4CAF50;
 }

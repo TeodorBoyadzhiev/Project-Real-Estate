@@ -1,6 +1,5 @@
 .img-container {
-  min-height: calc(100vh -140px);
-
+  min-height: calc(100vh - 108px);
 }
 
 .apartments-content {
@@ -8,15 +7,15 @@
   flex-direction: row;
   width: 100%;
   margin: 15px;
-  margin-left: 100px;
+  margin-top: 62px;
   padding-right: 15px;
 }
 
 .apartment {
   display: inline-block;
-  border: 1px solid #2b415433;
+  border: 1px solid #1f242866;
   background: white;
-  height: 425px;
+  height: 430px;
   margin: 20px 170px auto 100px;
   vertical-align: top;
 }

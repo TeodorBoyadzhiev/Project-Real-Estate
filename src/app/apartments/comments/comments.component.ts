@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css']
 })
-export class AsideComponent implements OnInit {
+export class AsideComponent  {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }

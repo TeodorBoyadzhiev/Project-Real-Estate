@@ -12,7 +12,7 @@ import { IApartment, IComment } from '../../shared/interfaces';
 export class DetailsComponent {
 
   apartment: IApartment | undefined;
-  comments: IComment | undefined;
+  recentComments: IComment[] | undefined;
 
   get isOwner(): boolean {
     return this.apartment?.userId == this.userService.user?._id
@@ -29,8 +29,12 @@ export class DetailsComponent {
   }
   fetchApartment(): void {
     this.apartment = undefined;
+    this.recentComments = undefined;
     const id = this.activatedRoute.snapshot.params.apartmentId;
-    this.contentService.getApartment(id).subscribe(apartment => this.apartment = apartment);
+    this.contentService.getApartment(id).subscribe(apartment => {
+      this.apartment = apartment,
+      this.recentComments = apartment.comments
+    });
   }
 
   deleteApartment(): void {

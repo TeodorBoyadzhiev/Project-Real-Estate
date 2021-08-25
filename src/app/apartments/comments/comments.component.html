@@ -1,16 +1,14 @@
 <div class="comments">
+
   <h3 class="title">Latest Comments</h3>
+
   <fieldset class="fieldset">
-    <label class="username" for="user">Zirgan:</label>
-    <p>This apartment is good for students</p>
-
-
-    <label class="username" for="user">Mirgan:</label>
-
-    <p>Very good location</p>
-
-    <label class="username" for="user">Turgan:</label>
-    <p>Are pets allow?</p>
+    <div>
+      <div *ngFor="let comment of recentApartment!.comments" >
+        <label class="username" for="user">{{comment.userId.username}}:</label>
+        <p>{{comment.comment}}</p>
+      </div>
+    </div>
 
   </fieldset>
 

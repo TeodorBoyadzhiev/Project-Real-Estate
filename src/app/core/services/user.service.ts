@@ -35,6 +35,10 @@ export class UserService {
       tap((user) => this.user = user)
     );
   }
+
+  getLatestApartments() {
+    return this.http.get<IUser[]>(`/api/posts`);
+  }
   
   updateProfile(data: { username: string; email: string; tel: string; }) {
     return this.http.put<IUser>(`/api/users/profile`, data).pipe(

@@ -11,48 +11,50 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    component: CatalogComponent
+    path: 'apartments',
+    component: CatalogComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: false,
+      authenticationFailureRedirectUrl: '/login'
+    }
   },
   {
-    path: 'create',
+    path: 'apartments/create',
     component: CreateComponent,
     canActivate: [AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: 'user/login'
+      authenticationFailureRedirectUrl: '/login'
     }
   },
   {
-    path: ':apartmentId',
+    path: 'apartments/:apartmentId',
     component: DetailsComponent,
     canActivate: [AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: 'user/login'
+      authenticationFailureRedirectUrl: '/login'
     }
   },
   {
-    path: 'edit/:apartmentId',
+    path: 'apartments/edit/:apartmentId',
     component: EditComponent,
     canActivate: [AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: 'user/login'
+      authenticationFailureRedirectUrl: '/login'
     }
   },
   {
-    path: 'comment/:apartmentId',
+    path: 'apartments/comment/:apartmentId',
     component: NewCommentComponent,
     canActivate: [AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: 'user/login'
+      authenticationFailureRedirectUrl: '/login'
     }
-
   }
-
 ]
 
 

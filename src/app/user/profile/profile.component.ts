@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../../core/services/user.service';
+import { IApartment } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-profile',
@@ -8,6 +9,8 @@ import { UserService } from '../../core/services/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
+
+  rentedApartments: IApartment[] | undefined;
 
   inUpdateMode = false;
 
@@ -20,8 +23,10 @@ export class ProfileComponent {
   constructor(
     private userService: UserService
   ) {
-    this.userService.getProfileInfo().subscribe(() => {
-      this.isLoading = false;
+    this.userService.getProfileInfo().subscribe(user => {
+      this.isLoading = false,
+      console.log(user)
+      this.rentedApartments = user.rentedApartments
     });
   }
 

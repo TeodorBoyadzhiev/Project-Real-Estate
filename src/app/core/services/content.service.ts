@@ -26,6 +26,10 @@ export class ContentService {
     return this.http.get<IApartment[]>(`/api/posts`);
   }
 
+  searchApartments(search: any) {
+    return this.http.get<IApartment[]>(`/api/posts/search`, search);
+  }
+
   saveApartment(data: { description: string; location: string; price: number; imageUrl: string }) {
     return this.http.post<IApartment>(`/api/apartments`, data);
   }

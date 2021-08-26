@@ -11,7 +11,6 @@ export class CommentsComponent<T> implements OnInit {
   @Input() comments!: IComment[] | undefined;
   @Input() recentApartment!: IApartment | undefined;
   constructor() {
-    console.log(this.comments)
    }
 
   ngOnInit(): void {

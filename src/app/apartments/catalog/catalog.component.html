@@ -2,8 +2,8 @@
   <main class="wrapper">
 
     <div class="search-wraper">
-      <form action="" class="search">
-        <input type="search" class="search-input" placeholder="Find the best offer for you">
+      <form #form="ngForm" class="search" (ngSubmit)="search(form)">
+        <input #searchInput="ngModel" ngModel type="search" class="search-input" name="search" placeholder="Find the best offer for you">
         <input type="submit" class="search-submit" value="Search">
       </form>
     </div>

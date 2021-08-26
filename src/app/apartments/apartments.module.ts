@@ -24,7 +24,8 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
   imports: [
     CommonModule,
     FormsModule,
-    ApartmentsRoutingModule
+    ApartmentsRoutingModule,
+    FormsModule
   ],
   providers: [
     ContentService

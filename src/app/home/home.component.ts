@@ -21,7 +21,6 @@ export class HomeComponent {
   fetchApartment(): void {
     this.apartments = undefined;
     this.contentService.getLatestApartments().subscribe(apartments => {
-      console.log(apartments)
       this.apartments = apartments
     });
   }

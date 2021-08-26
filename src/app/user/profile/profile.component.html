@@ -34,38 +34,27 @@
   <div class="user-rented">
     <h1>Your choices:</h1>
     <!-- // IF HAS RENTED APARTMETS -->
-    <ng-container>
-      <div class="apartment">
-        <img class="img" src="../../../assets/img2.jpg">
-        <p class="description">Blabla</p>
-        <ul class="items">
-          <li><span>Location: </span>Sofia</li>
-          <li><span>Price: </span>400$</li>
-        </ul>
-      </div>
-      <div class="apartment">
-        <img class="img" src="../../../assets/img2.jpg">
-        <p class="description">Blabla</p>
-        <ul class="items">
-          <li><span>Location: </span>Sofia</li>
-          <li><span>Price: </span>400$</li>
-        </ul>
-      </div>
-      <div class="apartment">
-        <img class="img" src="../../../assets/img2.jpg">
-        <p class="description">Blabla</p>
-        <ul class="items">
-          <li><span>Location: </span>Sofia</li>
-          <li><span>Price: </span>400$</li>
-        </ul>
+    <ng-container *ngIf="rentedApartments" class="apartment">
+
+      <div *ngFor="let apartment of rentedApartments">
+        <div class="apartment">
+          <img class="img" src="{{apartment.imageUrl}}">
+          <p class="description">{{apartment.description}}</p>
+          <ul class="items">
+            <li><span>Location: </span>{{apartment.location}}</li>
+            <li><span>Price: </span>{{apartment.price}}$</li>
+          </ul>
+        </div>
       </div>
     </ng-container>
-
-    <ng-container>
+    
+    <ng-container *ngIf="!rentedApartments" class="empty">
       <div class="empty">
         No apartments yet. Start searching.
       </div>
       <button type="button" class="btn" routerLink="/apartments">Catalog</button>
     </ng-container>
+    
   </div>
+
 </div>

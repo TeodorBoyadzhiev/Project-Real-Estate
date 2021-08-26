@@ -30,7 +30,7 @@ const routes: Routes = [
     canActivate:[AuthActivate],
     data: {
       authenticationRequired: true,
-      authenticationFailureRedirectUrl: 'user/login'
+      authenticationFailureRedirectUrl: '/login'
     }
   }
 ];

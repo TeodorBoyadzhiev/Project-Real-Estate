@@ -32,6 +32,7 @@ export class DetailsComponent {
     this.recentComments = undefined;
     const id = this.activatedRoute.snapshot.params.apartmentId;
     this.contentService.getApartment(id).subscribe(apartment => {
+      console.log(apartment)
       this.apartment = apartment,
       this.recentComments = apartment.comments
     });

@@ -92,6 +92,24 @@
   width: 100%;
 }
 
+.apartment {
+  display: inline-block;
+  height: fit-content;
+  border: 1px solid #1f242866;
+  background: white;
+  margin: 20px;
+  vertical-align: top;
+}
+
+.img {
+  width: 420px;
+  height: 260px;
+}
+
+.items {
+  text-align: left;
+}
+
  .btn {
    background-color: #4CAF50;
    border: none;

@@ -3,11 +3,17 @@
   <h3 class="title">Latest Comments</h3>
 
   <fieldset class="fieldset">
-    <div>
-      <div *ngFor="let comment of recentApartment!.comments" >
-        <label class="username" for="user">{{comment.userId.username}}:</label>
+
+    <div *ngIf="comments">
+      <div *ngFor="let comment of comments">
+        <label class="username" for="user">{{comment.userId.username}}:</label><br>
+        <label class="username" for="user">{{comment.created_at}}:</label>
         <p>{{comment.comment}}</p>
       </div>
+    </div>
+
+    <div *ngIf="!comments" class="empty">
+      No comments yet...
     </div>
 
   </fieldset>

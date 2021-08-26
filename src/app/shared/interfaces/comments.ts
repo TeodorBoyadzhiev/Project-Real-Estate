@@ -6,5 +6,6 @@ export interface IComment {
         password: String,
         _id: String
     },
+    created_at: String,
     _id: String
 };

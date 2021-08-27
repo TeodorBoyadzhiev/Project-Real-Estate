@@ -12,30 +12,31 @@
             <li><span>Price: </span>{{apartment!.price}}</li>
           </ul>
 
+          <p class="rented" *ngIf="isRented">This apartment is already rented!</p>
           <button routerLink="/apartments" class="btn">Back</button>
 
           <ng-container *ngIf="isOwner">
             <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
             <button routerLink="/apartments/comment/{{apartment!._id}}" class="btn">New Comment</button>
+            <button (click)="deleteApartment()" class="btn">Delete</button>
 
           </ng-container>
           <ng-container *ngIf="!isOwner">
             <button routerLink="/apartments/comment/{{apartment!._id}}" class="btn">New Comment</button>
 
             <!-- if for rent && not owener -->
-            <button class="btn">Rent it</button>
+            <button class="btn" routerLink="/apartments/{{apartment!._id}}" *ngIf="!isRented"
+              (click)="rentApartment()">Rent it</button>
 
             <!-- if rented == true  -->
-            <p>This apartment is already rented!</p>
           </ng-container>
 
         </div>
-        
+
       </div>
       <app-comments [recentApartment]="apartment" [comments]="recentComments"></app-comments>
     </div>
   </main>
 
-  
-</div>
 
+</div>

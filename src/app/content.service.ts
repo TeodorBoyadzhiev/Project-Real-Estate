@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IApartment, IComment } from '../../shared/interfaces';
+import { IApartment, IComment } from './shared/interfaces';
 import { tap } from 'rxjs/operators';
 
 @Injectable()
@@ -11,6 +11,10 @@ export class ContentService {
 
   constructor(private http: HttpClient) { }
 
+  rentApartment(id: string) {
+    return this.http.get<IApartment>(`/api/apartments/${id}/rent`).pipe(
+      tap((apartment) => this.apartment = apartment));
+  }
 
   getApartment(id: string) {
     return this.http.get<IApartment>(`/api/apartments/${id}`).pipe(
@@ -26,14 +30,16 @@ export class ContentService {
     return this.http.get<IApartment[]>(`/api/posts`);
   }
 
-  searchApartments(search: any) {
-    return this.http.get<IApartment[]>(`/api/posts/search`, search);
+  searchApartments(data: { search: string | '' }) {
+    data.search = data.search ? data.search : '';
+    return this.http.post<IApartment[]>(`/api/posts/search`, data);
   }
 
   saveApartment(data: { description: string; location: string; price: number; imageUrl: string }) {
     return this.http.post<IApartment>(`/api/apartments`, data);
   }
 
+ 
   saveComment(comment: string, id: string) {
     return this.http.post<IComment>(`/api/apartments/${id}`, comment);
   }

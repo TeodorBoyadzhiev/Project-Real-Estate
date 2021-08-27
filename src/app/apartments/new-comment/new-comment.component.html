@@ -6,17 +6,18 @@
       </div>
       <fieldset class="fieldset">
         <label for="comment"><span>Comment: </span></label>
-        <textarea #commentInput="ngModel" ngModel class="field" type="text" name="comment" placeholder="Comment...">
+        <textarea #commentInput="ngModel" ngModel class="field" type="text" name="comment" placeholder="Comment..."
+          minlength="2" required>
            </textarea>
 
-        <!-- <ng-container *ngIf="#commentInput.touched">
-            <p *ngIf=" #commentInput.errors?.required" class="error">
-              Description is required!
-            </p>
-            <p *ngIf=" #commentInput.errors?.minlength" class="error">
-              Description should be at least 5 characters long!
-            </p>
-          </ng-container> -->
+        <ng-container *ngIf="commentInput.touched">
+          <p *ngIf=" commentInput.errors?.required" class="error">
+            Comment should be at least 2 characters long!
+          </p>
+          <p *ngIf=" commentInput.errors?.minlength" class="error">
+            Comment should be at least 2 characters long!
+          </p>
+        </ng-container>
 
         <button class="btn">Comment</button>
       </fieldset>

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable } from "rxjs";
-import { UserService } from "../services/user.service";
+import { UserService } from "../../user.service";
 
 @Injectable()
 export class AuthActivate implements CanActivate {
@@ -13,7 +13,8 @@ export class AuthActivate implements CanActivate {
 
         if (
             typeof authenticationRequired == 'boolean' &&
-            authenticationRequired === this.userService.isLogged) { return true; }
+            authenticationRequired == this.userService.isLogged)
+        { return true; }
 
 
         let authRedirectUrl = authenticationFailureRedirectUrl;

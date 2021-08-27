@@ -10,9 +10,13 @@ export class CommentsComponent<T> implements OnInit {
 
   @Input() comments!: IComment[] | undefined;
   @Input() recentApartment!: IApartment | undefined;
-  constructor() {
-   }
 
+  constructor() {}
+
+  get areComments() {
+    return ((this.comments)?.length! > 0)
+  }
+  
   ngOnInit(): void {
   }
 

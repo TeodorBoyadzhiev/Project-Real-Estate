@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IUser } from '../../shared/interfaces/user';
+import { IUser } from './shared/interfaces/user';
 import { tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class UserService {
 
-  user: IUser | null | undefined = undefined;
-
+  user: IUser | null | undefined;
+  
   get isLogged(): boolean {
     console.log(!!this.user)
     return !!this.user;

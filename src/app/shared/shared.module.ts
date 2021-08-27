@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TitlecasePipe } from './pipes/titlecase.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TitlecasePipe
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TitlecasePipe
   ]
 })
 export class SharedModule { }

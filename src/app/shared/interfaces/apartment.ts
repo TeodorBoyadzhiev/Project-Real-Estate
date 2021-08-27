@@ -11,5 +11,6 @@ export interface IApartment {
         _id: String
     },
     created_at: String,
+    rented:any[],
     _id: String
 };

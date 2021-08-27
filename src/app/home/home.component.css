@@ -3,6 +3,10 @@
 
  }
 
+ .description {
+   font-size: 25px;
+ }
+
  .background-image {
    background: url('../../assets/skycraper.jpeg');
    background-position: 40% 60%;
@@ -42,73 +46,73 @@
 
 
  #top-houses {
-  text-align: center;
-  position: relative;
-  padding-bottom: 4%;
-}
+   text-align: center;
+   position: relative;
+   padding-bottom: 4%;
+ }
 
-.info>h1 {
-  font-size: 5.3rem;
-  margin: 12px 0 0px;
-  position: relative;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
-  padding: 0;
-  letter-spacing: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(234, 236, 250);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+ .info>h1 {
+   font-size: 5.3rem;
+   margin: 12px 0 0px;
+   position: relative;
+   font-weight: 700;
+   line-height: 1.1;
+   text-transform: uppercase;
+   padding: 0;
+   letter-spacing: 0px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(234, 236, 250);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
 
-.info>h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0;
-  letter-spacing: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(234, 236, 250);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+ .info>h2 {
+   font-size: 1.5rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   padding: 0;
+   letter-spacing: 0px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(234, 236, 250);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
 
-#top-houses>h1 {
-  font-size: 53px;
-  font-weight: 700;
-  margin-top: 30px;
-  padding-top: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  color: rgba(42, 42, 46, 0.85);
-}
+ #top-houses>h1 {
+   font-size: 53px;
+   font-weight: 700;
+   margin-top: 30px;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   width: 100%;
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   color: rgba(42, 42, 46, 0.85);
+ }
 
-.houses {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-evenly;
-  width: 100%;
-}
+ .houses {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: space-evenly;
+   width: 100%;
+ }
 
-.apartment {
-  display: inline-block;
-  height: fit-content;
-  border: 1px solid #1f242866;
-  background: white;
-  margin: 20px;
-  vertical-align: top;
-}
+ .apartment {
+   display: inline-block;
+   height: fit-content;
+   border: 1px solid #1f242866;
+   background: white;
+   margin: 20px;
+   vertical-align: top;
+ }
 
-.img {
-  width: 420px;
-  height: 260px;
-}
+ .img {
+   width: 420px;
+   height: 260px;
+ }
 
-.items {
-  text-align: left;
-}
+ .items {
+   text-align: left;
+ }
 
  .btn {
    background-color: #4CAF50;
@@ -119,9 +123,9 @@
    text-align: center;
    text-decoration: none;
    display: inline-block;
-   font-size: 16px;
+   font-size: 20px;
    transition: .3s ease;
-   
+
 
  }
 

@@ -56,6 +56,12 @@
   height: 260px;
 }
 
+.description{
+  margin-top: 10px;
+  font-size: 20px;
+  border-block: 1px solid #1f242866;
+}
+
 .btn {
   color: #333;
   text-decoration: none;

@@ -1,5 +1,13 @@
-.container{
+.container {
   min-height: calc(100vh - 108px);
+}
+
+.user-rented {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 
@@ -96,7 +104,7 @@
 }
 
 .flex>div>input {
-    border: black;
+  border: black;
   width: 77%;
 }
 
@@ -134,14 +142,10 @@
   display: inline-block;
   font-size: 16px;
   transition: .3s ease;
-  
+
 
 }
 
 .btn:hover {
   border-radius: 0px;
 }
-
-
-
-

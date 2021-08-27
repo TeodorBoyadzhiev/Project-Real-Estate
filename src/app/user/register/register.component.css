@@ -5,6 +5,8 @@
   height: 350px;
   position: relative;
   margin: 3%auto;
+  margin-top: 40px;
+  min-height: calc(100vh - 125px);
 }
 
 
@@ -32,6 +34,7 @@
   outline: none;
   background: transparent;
 }
+
 
 .btn {
   width: 30%;

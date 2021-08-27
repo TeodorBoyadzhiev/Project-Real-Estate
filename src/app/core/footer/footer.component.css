@@ -3,7 +3,9 @@ footer {
   width: 100%;
   box-shadow: 0 0 3px;
   height: 90px;
-  
+  display: inline-block;
+  margin-top: 95px;
+
 }
 
 /* footer {
@@ -22,7 +24,6 @@ footer ul li {
   padding-right: 20px;
   margin-left: 15px;
   position: relative;
-  display: inline;
 }
 
 footer p {

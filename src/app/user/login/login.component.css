@@ -32,6 +32,10 @@
   height: auto;
 }
 
+.login{
+  margin-bottom: 100px;
+}
+
 .btn {
   width: 25%;
   padding: 15px 25px;

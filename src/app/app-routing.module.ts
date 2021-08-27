@@ -15,8 +15,10 @@ const routes: Routes = [
   },
   {
     path: 'apartments',
+    pathMatch: 'full',
     component: CatalogComponent
   },
+  
 
 ];
 

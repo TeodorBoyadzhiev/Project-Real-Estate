@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContentService } from '../../core/services/content.service';
-import { UserService } from '../../core/services/user.service';
+import { ContentService } from '../../content.service';
+import { UserService } from '../../user.service';
 import { IApartment, IComment } from '../../shared/interfaces';
 
 @Component({
@@ -15,7 +15,11 @@ export class DetailsComponent {
   recentComments: IComment[] | undefined;
 
   get isOwner(): boolean {
-    return this.apartment?.userId == this.userService.user?._id
+    return this.apartment?.userId._id == this.userService.user?._id
+  }
+
+  get isRented() {
+    return ((this.apartment?.rented)?.length! > 0)
   }
 
   constructor(
@@ -33,9 +37,19 @@ export class DetailsComponent {
     const id = this.activatedRoute.snapshot.params.apartmentId;
     this.contentService.getApartment(id).subscribe(apartment => {
       this.apartment = apartment,
-      this.recentComments = apartment.comments
+        this.recentComments = apartment.comments
     });
   }
+
+  rentApartment(): void {
+    const userId = this.userService.user?._id;
+    const id = this.activatedRoute.snapshot.params.apartmentId;
+    this.contentService.rentApartment(id).subscribe({
+      next: () => this.router.navigate([`/profile`]),
+      error: (err) => console.error(err)
+    });
+  }
+
 
   deleteApartment(): void {
     this.apartment = undefined;

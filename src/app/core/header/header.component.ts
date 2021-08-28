@@ -5,7 +5,7 @@ import { UserService } from '../../user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
 
@@ -18,11 +18,11 @@ export class HeaderComponent {
   }
 
   constructor(
-    private userService:UserService,
+    private userService: UserService,
     private router: Router
   ) {
-    
-   }
+
+  }
 
   logout(): void {
     this.userService.logout().subscribe(() => {

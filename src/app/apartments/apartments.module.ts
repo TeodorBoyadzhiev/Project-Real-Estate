@@ -19,7 +19,9 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
     EditComponent,
     DetailsComponent,
     CommentsComponent,
-    NewCommentComponent
+    NewCommentComponent,
+    
+    
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,7 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
     FormsModule
   ],
   providers: [
-    ContentService
+    ContentService,
   ]
 })
 export class ApartmentsModule { }

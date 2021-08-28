@@ -10,7 +10,7 @@ export class UserService {
   user: IUser | null | undefined;
   
   get isLogged(): boolean {
-    console.log(!!this.user)
+    // console.log(!!this.user)
     return !!this.user;
   }
 
@@ -36,9 +36,12 @@ export class UserService {
     );
   }
 
-  getLatestApartments() {
-    return this.http.get<IUser[]>(`/api/posts`);
+  loggedIn() {
+    console.log(!!localStorage.getItem)
+
+    return !!localStorage.getItem('auth-cookie')
   }
+
   
   updateProfile(data: { username: string; email: string; tel: string; }) {
     return this.http.put<IUser>(`/api/users/profile`, data).pipe(

@@ -25,7 +25,6 @@ export class ProfileComponent {
   ) {
     this.userService.getProfileInfo().subscribe(user => {
       this.isLoading = false,
-      console.log(user)
       this.rentedApartments = user.rentedApartments
     });
   }

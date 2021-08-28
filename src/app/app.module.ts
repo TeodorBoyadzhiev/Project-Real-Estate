@@ -34,7 +34,7 @@ import { UserService } from './user.service';
   ],
   providers: [
     ContentService,
-    UserService
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

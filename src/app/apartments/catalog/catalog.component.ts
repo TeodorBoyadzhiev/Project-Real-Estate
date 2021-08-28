@@ -7,9 +7,9 @@ import { IApartment } from '../../shared/interfaces';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  styleUrls: ['./catalog.component.css'],
 })
-  
+
 export class CatalogComponent implements OnInit {
 
   apartments?: IApartment[] | undefined;
@@ -21,7 +21,7 @@ export class CatalogComponent implements OnInit {
 
   ) {
     this.fetchApartments();
-    
+
   }
 
   ngOnInit(): void {
@@ -47,10 +47,10 @@ export class CatalogComponent implements OnInit {
         this.errorLoadingUsers = true;
       },
       () => console.log('load apartments stream completed.')
-        
-    
+
+
     )
-    
+
   }
 
 }

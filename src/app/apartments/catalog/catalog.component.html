@@ -6,7 +6,7 @@
       <form #form="ngForm" class="search" method="GET" (ngSubmit)="search(form)">
         <input #searchInput="ngModel" ngModel type="search" class="search-input" name="search"
           placeholder="Find the best offer for you">
-        <input type="submit" class="search-submit" value="Search">
+        <!-- <input type="submit" class="search-submit" value="Search"> -->
       </form>
     </div>
     <div class="error" *ngIf="errorLoadingUsers">Error loading users! Check your connection!</div>

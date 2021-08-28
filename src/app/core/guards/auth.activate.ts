@@ -11,9 +11,14 @@ export class AuthActivate implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         const { authenticationRequired, authenticationFailureRedirectUrl } = route.data;
 
+        // if (this.userService) {
+        //     console.log(this.userService.isLogged)
+        //     return true;
+        // }
+
         if (
-            typeof authenticationRequired == 'boolean' &&
-            authenticationRequired == this.userService.isLogged)
+            typeof authenticationRequired === 'boolean' &&
+            authenticationRequired === this.userService.isLogged)
         { return true; }
 
 

@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { sameValueAsFactory } from 'src/app/shared/validators';
+import { sameValueAsFactory } from '../../shared/validators';
 import { UserService } from '../../user.service';
 
 @Component({

@@ -23,6 +23,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.6.0",
+    "tar": "^6.1.11",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },

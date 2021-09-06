@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from '../../content.service';
 import { IApartment } from '../../shared/interfaces';
 
@@ -17,19 +17,22 @@ export class CatalogComponent implements OnInit {
 
   constructor(
     private contentService: ContentService,
+    private route: ActivatedRoute,
     private router: Router
 
   ) {
-    this.fetchApartments();
+    // this.fetchApartments();
 
   }
 
   ngOnInit(): void {
+    this.apartments = undefined;
+    this.contentService.getApartments().subscribe(apartments => this.apartments = apartments);
   }
 
   fetchApartments(): void {
-    this.apartments = undefined;
-    this.contentService.getApartments().subscribe(apartments => this.apartments = apartments);
+    // this.apartments = undefined;
+    // this.contentService.getApartments().subscribe(apartments => this.apartments = apartments);
   }
 
 

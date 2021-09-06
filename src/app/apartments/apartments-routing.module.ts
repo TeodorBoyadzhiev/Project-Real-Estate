@@ -20,6 +20,15 @@ const routes: Routes = [
     }
   },
   {
+    path: 'apartments/search/:searchTerm',
+    component: CatalogComponent,
+    canActivate: [AuthActivate],
+    data: {
+      authenticationRequired: false,
+      authenticationFailureRedirectUrl: '/login'
+    }
+  },
+  {
     path: 'apartments/create',
     component: CreateComponent,
     canActivate: [AuthActivate],

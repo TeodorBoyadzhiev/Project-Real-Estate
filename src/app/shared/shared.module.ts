@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { FilterpipePipe } from './pipes/filterpipe.pipe';
+import { TitlecasePipe } from './pipes/titlecase.pipe';
 
 
 
@@ -14,9 +14,8 @@ import { FilterpipePipe } from './pipes/filterpipe.pipe';
     CommonModule
   ],
   exports: [
-    FilterpipePipe,
     TitlecasePipe,
-
+    FilterpipePipe,
   ]
 })
 export class SharedModule { }

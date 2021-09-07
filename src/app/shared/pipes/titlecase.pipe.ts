@@ -5,9 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TitlecasePipe implements PipeTransform {
 
-  transform(value: string) {
-    value = value.charAt(0).toUpperCase() + value.slice(1);
-    return value;
+  transform(value: string): string {
+    let first = value.substr(0, 1).toUpperCase();
+    return first + value.substr(1);
   }
 
 }

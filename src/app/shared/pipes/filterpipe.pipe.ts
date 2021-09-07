@@ -5,13 +5,22 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterpipePipe implements PipeTransform {
 
-  transform(apartments: any, searchInput: any): any {
+  transform(apartments: any[], searchInput: string, propName: string): any {
 
-    if (searchInput === undefined) { return apartments };
+    const resultArray = [];
 
-    return apartments.filter(function (apartment: any) {
-      return apartment.description.toLowerCase().includes(searchInput.toLowerCase());
-    });
+    if (apartments.length === 0 || searchInput === '' || propName === '') {
+      return apartments;
+    }
+
+    for (const item of apartments) {
+      if (item[propName] === searchInput) {
+        resultArray.push(item);
+      }
+    }
+
+    return resultArray;
+
   }
 
 }

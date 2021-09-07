@@ -25,11 +25,11 @@ import { UserService } from './user.service';
   imports: [
     BrowserModule,
     CoreModule,
-    SharedModule,
     HttpClientModule,
     AppRoutingModule,
     ApartmentsModule,
     UserModule,
+    SharedModule,
     NotFoundRoutingModule
   ],
   providers: [

@@ -7,14 +7,14 @@
         <li><a type="button" routerLink="/apartments/create">Create</a></li>
       </ul>
 
-      <ul id="authBtn"  *ngIf="!isLogged">
+      <ul id="authBtn" *ngIf="!isLogged">
         <li><a type="button" routerLink="/login">Login</a></li>
         <li><a type="button" routerLink="/register">Register</a></li>
       </ul>
 
       <ul id="authBtn" *ngIf="isLogged">
         <li class="logout"><a (click)="logout()" type="button">Logout</a></li>
-        <li><a type="button" routerLink="profile">{{username}}'s profile</a></li>
+        <li><a type="button" routerLink="profile">{{username }}'s profile</a></li>
       </ul>
     </div>
 

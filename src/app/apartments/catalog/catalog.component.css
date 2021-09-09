@@ -1,3 +1,9 @@
+.img-container {
+  text-align: center;
+  justify-content: center;
+
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -5,8 +11,9 @@
   flex: 100px;
   width: 100%;
   margin: 15px;
-  margin-left: 100px;
-  padding-right: 15px;
+
+  justify-content: center;
+
 }
 
 .search-wraper {
@@ -21,7 +28,6 @@
   position: relative;
   max-width: 614px;
   width: 100%;
-  margin-left: -216px;
 }
 
 .search-input {
@@ -30,6 +36,12 @@
   line-height: 48px;
   padding: 2px 57px 0 20px;
   border-radius: 5px;
+}
+
+.search-input:focus {
+  outline: none !important;
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px #4CAF50;
 }
 
 .search-submit {
@@ -52,12 +64,16 @@
   vertical-align: top;
 }
 
+.apartments-content {
+  margin: 10px;
+}
+
 .img {
   width: 420px;
   height: 260px;
 }
 
-.description{
+.description {
   margin-top: 10px;
   font-size: 20px;
   border-block: 1px solid #1f242866;

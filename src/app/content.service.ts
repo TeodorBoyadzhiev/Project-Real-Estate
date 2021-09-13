@@ -30,16 +30,15 @@ export class ContentService {
     return this.http.get<IApartment[]>(`/api/posts`);
   }
 
-  searchApartments(data: { search: string | '' }) {
-    data.search = data.search ? data.search : '';
-    return this.http.post<IApartment[]>(`/api/posts/search`, data);
-  }
+  // searchApartments(search: string) {
+  //   return this.http.get<IApartment[]>(`/api/posts/search?=${search}`);
+  // }
 
   saveApartment(data: { description: string; location: string; price: number; imageUrl: string }) {
     return this.http.post<IApartment>(`/api/apartments`, data);
   }
 
- 
+
   saveComment(comment: string, id: string) {
     return this.http.post<IComment>(`/api/apartments/${id}`, comment);
   }

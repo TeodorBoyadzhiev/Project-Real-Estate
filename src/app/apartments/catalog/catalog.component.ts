@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from '../../content.service';
 import { IApartment } from '../../shared/interfaces';
 
@@ -12,48 +10,30 @@ import { IApartment } from '../../shared/interfaces';
 
 export class CatalogComponent implements OnInit {
 
-  apartments?: IApartment[] | undefined;
+  apartments?: IApartment[] = [];
+  description: any;
   errorLoadingUsers = false;
 
   constructor(
-    private contentService: ContentService,
-    private route: ActivatedRoute,
-    private router: Router
-
-  ) {
-    // this.fetchApartments();
-
-  }
+    private contentService: ContentService
+  ) { }
 
   ngOnInit(): void {
     this.apartments = undefined;
     this.contentService.getApartments().subscribe(apartments => this.apartments = apartments);
   }
 
-  fetchApartments(): void {
-    // this.apartments = undefined;
-    // this.contentService.getApartments().subscribe(apartments => this.apartments = apartments);
+
+  Search() {
+    if (this.description == '') {
+      this.ngOnInit();
+    } else {
+      this.apartments = this.apartments!.filter(res => {
+        return res.description.toLocaleLowerCase().match(this.description.toLocaleLowerCase())
+      })
+    }
   }
 
 
-
-
-  search(form: NgForm): void {
-    this.apartments = undefined;
-    if (form.invalid) { return; }
-    console.log(form.value)
-    const { search } = form.value;
-    this.contentService.searchApartments(search).subscribe(
-      apartments => this.apartments = apartments,
-      error => {
-        console.log(error);
-        this.errorLoadingUsers = true;
-      },
-      () => console.log('load apartments stream completed.')
-
-
-    )
-
-  }
 
 }

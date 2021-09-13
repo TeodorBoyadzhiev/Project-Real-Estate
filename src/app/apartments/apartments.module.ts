@@ -9,6 +9,7 @@ import { ContentService } from '../content.service';
 import { FormsModule } from '@angular/forms';
 import { CommentsComponent } from './comments/comments.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -20,14 +21,15 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
     DetailsComponent,
     CommentsComponent,
     NewCommentComponent,
-    
-    
+
+
   ],
   imports: [
     CommonModule,
     FormsModule,
     ApartmentsRoutingModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     ContentService,

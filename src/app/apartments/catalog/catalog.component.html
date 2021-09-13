@@ -1,13 +1,15 @@
-<div ></div>
+<div *ngIf="!apartments">
+  No apartments found!
+</div>
 <div id="img-container" *ngIf="apartments">
   <main class="wrapper">
 
     <div class="search-wraper">
-      <form #form="ngForm" class="search" method="GET" (ngSubmit)="search(form)">
-        <input #searchInput="ngModel" ngModel type="search" class="search-input" name="search"
-          placeholder="Find the best offer for you">
+      <div class="search" >
+        <input type="text" class="search-input" name="description" [(ngModel)]="description" (ngModelChange)="Search()"
+          placeholder="Search by description here">
         <!-- <input type="submit" class="search-submit" value="Search"> -->
-      </form>
+      </div>
     </div>
     <div class="error" *ngIf="errorLoadingUsers">Error loading users! Check your connection!</div>
     <div class="apartments-content" *ngFor="let apartment of apartments">

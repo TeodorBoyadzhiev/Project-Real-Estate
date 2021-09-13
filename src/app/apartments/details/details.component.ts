@@ -31,6 +31,7 @@ export class DetailsComponent {
     this.fetchApartment();
 
   }
+  
   fetchApartment(): void {
     this.apartment = undefined;
     this.recentComments = undefined;

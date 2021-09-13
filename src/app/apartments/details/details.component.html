@@ -16,9 +16,9 @@
           <button routerLink="/apartments" class="btn">Back</button>
 
           <ng-container *ngIf="isOwner">
-            <button routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
+            <button *ngIf="isOwner && !isRented" routerLink="/apartments/edit/{{apartment!._id}}" class="btn">Edit</button>
             <button routerLink="/apartments/comment/{{apartment!._id}}" class="btn">New Comment</button>
-            <button (click)="deleteApartment()" class="btn">Delete</button>
+            <button *ngIf="isOwner && !isRented" (click)="deleteApartment()" class="btn">Delete</button>
 
           </ng-container>
           <ng-container *ngIf="!isOwner">

@@ -1,5 +1,5 @@
 export interface IUser {
-    username: String | string,
+    username: String,
     email: String,
     password: String,
     repeatePassword: String,

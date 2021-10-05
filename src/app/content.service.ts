@@ -6,7 +6,7 @@ import { tap } from 'rxjs/operators';
 @Injectable()
 export class ContentService {
 
-  apartment: IApartment | undefined;
+  apartment?: IApartment;
 
 
   constructor(private http: HttpClient) { }

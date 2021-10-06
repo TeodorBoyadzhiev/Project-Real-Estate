@@ -1,0 +1,223 @@
+ main {
+   min-height: calc(100vh - -83px);
+
+ }
+
+ .description {
+   font-size: 25px;
+ }
+
+ .background-image {
+   background: url('../../assets/skycraper.jpeg');
+   background-position: 40% 60%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: local;
+
+
+ }
+
+ .home-container {
+   margin: 0px auto 4px 0;
+   padding-top: 1px;
+   height: 500px;
+   display: flex;
+   top: 0%;
+   left: 50%;
+   margin-left: 70px;
+   text-align: center;
+ }
+
+ .info {
+   justify-items: legacy;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   flex: 1;
+   margin-top: -16px;
+   margin-left: -183px;
+   max-width: 100%;
+
+ }
+
+ html body app-root app-home main section#home-page.background-image div.home-container div.info h1 {
+   margin-top: -243px;
+ }
+
+
+ #top-houses {
+   text-align: center;
+   position: relative;
+   padding-bottom: 4%;
+ }
+
+ .info>h1 {
+   font-size: 5.3rem;
+   margin: 12px 0 0px;
+   position: relative;
+   font-weight: 700;
+   line-height: 1.1;
+   text-transform: uppercase;
+   padding: 0;
+   letter-spacing: 0px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(234, 236, 250);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ .info>h2 {
+   font-size: 1.5rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   padding: 0;
+   letter-spacing: 0px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(234, 236, 250);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ #top-houses>h1 {
+   font-size: 53px;
+   font-weight: 700;
+   margin-top: 30px;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   width: 100%;
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   color: rgba(42, 42, 46, 0.85);
+ }
+
+ .houses {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: space-evenly;
+   width: 100%;
+ }
+
+ .apartment {
+   display: inline-block;
+   height: fit-content;
+   border: 1px solid #1f242866;
+   background: white;
+   margin: 20px;
+   vertical-align: top;
+ }
+
+ .img {
+   width: 420px;
+   height: 260px;
+ }
+
+ .items {
+   text-align: left;
+ }
+
+ .btn {
+   background-color: #4CAF50;
+   border: none;
+   border-radius: 30px;
+   color: white;
+   padding: 15px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 20px;
+   transition: .3s ease;
+
+
+ }
+
+ .btn:hover {
+   border-radius: 0px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+.slider-frame {
+  overflow: hidden;
+  height: 800px;
+  width: 1200px;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+
+@-webkit-keyframes slide_animation {
+  0% {
+    left: -2400px;
+  }
+
+  10% {
+    left: 0px;
+  }
+
+  20% {
+    left: 1200px;
+  }
+
+  30% {
+    left: 1200px;
+  }
+
+  40% {
+    left: 2400px;
+  }
+
+  50% {
+    left: 2400px;
+  }
+
+  60% {
+    left: 1200px;
+  }
+
+  70% {
+    left: 1200px;
+  }
+
+  80% {
+    left: 0px;
+  }
+
+  90% {
+    left: 0px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+
+.slide-images {
+  width: 6000px;
+  height: 800px;
+  margin: 0 0 0 -2000px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+*/

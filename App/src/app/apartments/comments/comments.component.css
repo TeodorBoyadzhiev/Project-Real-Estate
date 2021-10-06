@@ -1,0 +1,59 @@
+/* .title {
+  background-color: green;
+  margin: 20px 170px auto 100px;
+  width: 450px;
+} */
+
+.empty {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.fieldset {
+  width: 450px;
+  height: auto;
+  border: 5px solid #999;
+  border-radius: 30px;
+  background-color: hsla(0, 0%, 94.1%, .8);
+  box-shadow: 0 0 1em 0 #000;
+  position: relative;
+  margin: 20px 170px auto 100px;
+  text-align: left;
+
+}
+
+.fieldset p {
+  border-bottom: 2px solid #999;
+
+}
+
+div h3 {
+  font-size: 25px;
+  margin-right: 60px;
+}
+
+.new-comment {
+  width: 30%;
+  padding: 15px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: 0;
+  border-bottom: 2px solid #999;
+  top: 100%;
+  background-color: white;
+  transition: .3s;
+}
+
+.new-comment:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 30px;
+  transition: .3s;
+  font-size: medium;
+}
+
+.username {
+  color: #4CAF50;
+}

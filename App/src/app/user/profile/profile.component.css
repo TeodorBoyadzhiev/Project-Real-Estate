@@ -1,0 +1,151 @@
+.container {
+  min-height: calc(100vh - 108px);
+}
+
+.user-rented {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+.profile {
+  width: 100%;
+  max-width: 500px;
+  margin: 2em auto 1rem;
+  padding: .5em;
+  border: 5px solid #999;
+  border-radius: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: hsla(0, 0%, 94.1%, .8);
+  box-shadow: 0 0 1em 0 #000;
+  text-align: center;
+
+}
+
+.profile h3 {
+  text-decoration: underline;
+}
+
+.profile img {
+  width: 7em;
+  height: 7em;
+  margin: auto;
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex p:first-child {
+  width: 35%;
+  text-align: right;
+  margin: .5em;
+}
+
+.flex p:last-child {
+  width: 55%;
+  text-align: left;
+  margin: .5em;
+  font-weight: bold;
+
+}
+
+.editBtn {
+  color: #333;
+  text-decoration: none;
+  padding: 13px;
+  margin-left: 10px;
+  transition: .3s ease;
+}
+
+.editBtn:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 30px;
+}
+
+.red-button {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 13px;
+  margin-left: 10px;
+  transition: .3s ease;
+}
+
+.red-button:hover {
+  background-color: red;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.green-button {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 13px;
+  margin-left: 10px;
+  transition: .3s ease;
+}
+
+.green-button:hover {
+  background-color: #4CAF50;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.flex>input,
+.flex>div {
+  width: 55%;
+  text-align: left;
+  margin: .5em;
+}
+
+.flex>div>input {
+  border: black;
+  width: 77%;
+}
+
+.flex select {
+  padding: 0.17em 0;
+}
+
+
+.apartment {
+  display: inline-block;
+  height: fit-content;
+  border: 1px solid #1f242866;
+  background: white;
+  margin: 20px;
+  vertical-align: top;
+}
+
+.img {
+  width: 420px;
+  height: 260px;
+}
+
+.items {
+  text-align: left;
+}
+
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: .3s ease;
+
+
+}
+
+.btn:hover {
+  border-radius: 0px;
+}

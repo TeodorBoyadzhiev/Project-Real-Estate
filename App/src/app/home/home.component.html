@@ -1,0 +1,55 @@
+<main>
+  <section id="home-page" class="background-image">
+    <div class="home-container">
+      <div class="info">
+        <h1>Home Sweet Home!</h1>
+        <h2>
+          Are you looking for new home?
+        </h2>
+        <P><a type="button" class="btn" routerLink="/apartments">Catalog</a></P>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="top-houses">
+    <h1>Latest Offers</h1>
+    <div class="houses">
+      <div *ngIf="apartments" class="apartment">
+        <ng-container *ngFor="let apartment of apartments">
+          <div class="apartment">
+            <img class="img" src="{{apartment.imageUrl}}">
+            <p class="description">{{apartment.description}}</p>
+            <!-- <ul class="items">
+              <li><span>Location: </span>{{apartment.location}}</li>
+              <li><span>Price: </span>{{apartment.price}}$</li>
+            </ul> -->
+          </div>
+          
+
+        </ng-container>
+      </div>
+
+      <div *ngIf="!apartments" class="no-data-listing">
+        <p class="no-offer">There are no housing offers found...</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section>
+    <div class="apartment-hot">
+      <img class="img-apartment" src="../../assets/skycraper.jpeg">
+      <p class="description">Description</p>
+      <ul class="items">
+        <li><span>Location: </span>Sofia</li>
+        <li><span>Price: </span>500$</li>
+      </ul>
+
+      <button routerLink="#" class="btn">Details</button>
+    </div>
+  </section> -->
+
+
+</main>

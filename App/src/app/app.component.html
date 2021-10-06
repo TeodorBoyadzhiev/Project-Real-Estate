@@ -1,0 +1,7 @@
+<div class="loader" *ngIf="isAuthenticating">Loading...</div>
+
+<ng-container *ngIf="!isAuthenticating">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</ng-container>

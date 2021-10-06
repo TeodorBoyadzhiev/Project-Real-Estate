@@ -18,7 +18,7 @@ export class AuthActivate implements CanActivate {
 
         if (
             typeof authenticationRequired === 'boolean' &&
-            authenticationRequired === this.userService.isLogged)
+            authenticationRequired === this.userService.loggedIn())
         { return true; }
 
 

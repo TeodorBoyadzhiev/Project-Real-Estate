@@ -95,3 +95,8 @@
 .items {
   text-align: left;
 }
+
+.apartments-notFound {
+  justify-content: center;
+  align-items: center;
+}

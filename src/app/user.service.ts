@@ -8,15 +8,17 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   user: IUser | null | undefined;
-  
-  get isLogged(): boolean {
-    // console.log(!!this.user)
-    return !!this.user;
-  }
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+    this.loggedIn();
+  }
+
+  get isLogged(): boolean {
+    // console.log(this.loggedIn())
+    return !!this.loggedIn();
+  }
 
   login(data: { email: string, password: string }) {
     return this.http.post<IUser>(`/api/login`, data).pipe(
@@ -42,7 +44,7 @@ export class UserService {
     return !!localStorage.getItem('auth-cookie')
   }
 
-  
+
   updateProfile(data: { username: string; email: string; tel: string; }) {
     return this.http.put<IUser>(`/api/users/profile`, data).pipe(
       tap((user) => this.user = user)

@@ -1,158 +1,151 @@
- main {
-   min-height: calc(100vh - -83px);
+main {
+  min-height: calc(100vh - -83px);
+}
 
- }
+.description {
+  font-size: 25px;
+}
 
- .description {
-   font-size: 25px;
- }
+.background-image {
+  background: url('../../assets/skycraper.jpeg');
+  background-position: 40% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+}
 
- .background-image {
-   background: url('../../assets/skycraper.jpeg');
-   background-position: 40% 60%;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: local;
+.home-container {
+  margin: 0px auto 4px 0;
+  padding-top: 1px;
+  height: 500px;
+  display: flex;
+  top: 0%;
+  left: 50%;
+  margin-left: 70px;
+  text-align: center;
+}
 
+.info {
+  justify-items: legacy;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  margin-top: -16px;
+  margin-left: -183px;
+  max-width: 100%;
+}
 
- }
+html
+  body
+  app-root
+  app-home
+  main
+  section#home-page.background-image
+  div.home-container
+  div.info
+  h1 {
+  margin-top: -243px;
+}
 
- .home-container {
-   margin: 0px auto 4px 0;
-   padding-top: 1px;
-   height: 500px;
-   display: flex;
-   top: 0%;
-   left: 50%;
-   margin-left: 70px;
-   text-align: center;
- }
+#top-houses {
+  text-align: center;
+  position: relative;
+  padding-bottom: 4%;
+}
 
- .info {
-   justify-items: legacy;
-   display: flex;
-   flex-direction: column;
-   position: relative;
-   flex: 1;
-   margin-top: -16px;
-   margin-left: -183px;
-   max-width: 100%;
+.info > h1 {
+  font-size: 5.3rem;
+  margin: 12px 0 0px;
+  position: relative;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding: 0;
+  letter-spacing: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(234, 236, 250);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
- }
+.info > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  letter-spacing: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(234, 236, 250);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
- html body app-root app-home main section#home-page.background-image div.home-container div.info h1 {
-   margin-top: -243px;
- }
+#top-houses > h1 {
+  font-size: 53px;
+  font-weight: 700;
+  margin-top: 30px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(42, 42, 46, 0.85);
+}
 
+.houses {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
- #top-houses {
-   text-align: center;
-   position: relative;
-   padding-bottom: 4%;
- }
+.apartment {
+  display: inline-block;
+  height: fit-content;
+  border: 1px solid #1f242866;
+  background: white;
+  margin: 20px;
+  vertical-align: top;
+}
 
- .info>h1 {
-   font-size: 5.3rem;
-   margin: 12px 0 0px;
-   position: relative;
-   font-weight: 700;
-   line-height: 1.1;
-   text-transform: uppercase;
-   padding: 0;
-   letter-spacing: 0px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   color: rgb(234, 236, 250);
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
- }
+.img {
+  width: 420px;
+  height: 260px;
+}
 
- .info>h2 {
-   font-size: 1.5rem;
-   font-weight: 700;
-   text-transform: uppercase;
-   padding: 0;
-   letter-spacing: 0px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   color: rgb(234, 236, 250);
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
- }
+.items {
+  text-align: left;
+}
 
- #top-houses>h1 {
-   font-size: 53px;
-   font-weight: 700;
-   margin-top: 30px;
-   padding-top: 10px;
-   margin-bottom: 20px;
-   width: 100%;
-   text-align: center;
-   font-family: 'Raleway', sans-serif;
-   color: rgba(42, 42, 46, 0.85);
- }
+.btn {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
 
- .houses {
-   display: flex;
-   flex-wrap: wrap;
-   text-align: center;
-   justify-content: space-evenly;
-   width: 100%;
- }
+.btn:hover {
+  border-radius: 0px;
+}
 
- .apartment {
-   display: inline-block;
-   height: fit-content;
-   border: 1px solid #1f242866;
-   background: white;
-   margin: 20px;
-   vertical-align: top;
- }
+.apartment-item:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  transform: scale(1.05);
+}
 
- .img {
-   width: 420px;
-   height: 260px;
- }
+.detailsClick {
+  text-decoration: none;
+  color: black;
+}
 
- .items {
-   text-align: left;
- }
-
- .btn {
-   background-color: #4CAF50;
-   border: none;
-   border-radius: 30px;
-   color: white;
-   padding: 15px 20px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 20px;
-   transition: .3s ease;
-
-
- }
-
- .btn:hover {
-   border-radius: 0px;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /*
+/*
 .slider-frame {
   overflow: hidden;
   height: 800px;

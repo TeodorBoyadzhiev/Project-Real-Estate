@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ContentService } from '../../content.service';
 import { IApartment } from '../../shared/interfaces';
 
@@ -8,7 +8,7 @@ import { IApartment } from '../../shared/interfaces';
   styleUrls: ['./catalog.component.css'],
 })
 
-export class CatalogComponent implements OnInit {
+export class CatalogComponent implements OnInit, OnChanges{
 
   apartments?: IApartment[] = [];
   description: any;
@@ -17,6 +17,9 @@ export class CatalogComponent implements OnInit {
   constructor(
     private contentService: ContentService
   ) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
     this.apartments = undefined;

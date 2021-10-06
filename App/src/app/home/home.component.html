@@ -18,15 +18,17 @@
     <div class="houses">
       <div *ngIf="apartments" class="apartment">
         <ng-container *ngFor="let apartment of apartments">
-          <div class="apartment">
-            <img class="img" src="{{apartment.imageUrl}}">
-            <p class="description">{{apartment.description}}</p>
+          <div class="apartment apartment-item">
+            <a class="detailsClick" routerLink="/apartments/{{apartment._id}}">
+              <img class="img" src="{{apartment.imageUrl}}">
+              <p class="description">{{apartment.description}}</p>
+            </a>
             <!-- <ul class="items">
               <li><span>Location: </span>{{apartment.location}}</li>
               <li><span>Price: </span>{{apartment.price}}$</li>
             </ul> -->
           </div>
-          
+
 
         </ng-container>
       </div>

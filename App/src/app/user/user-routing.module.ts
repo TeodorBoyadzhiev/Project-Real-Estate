@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivateChild:[AuthActivate],
+    canActivate:[AuthActivate],
     data: {
       authenticationRequired: false,
       authenticationFailureRedirectUrl: '/'

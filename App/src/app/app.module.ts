@@ -12,7 +12,7 @@ import { ApartmentsModule } from './apartments/apartments.module';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
 import { NotFoundRoutingModule } from './not-found/not-found-routing.module';
 import { ContentService } from './content.service';
-import { UserService } from './user.service';
+import { UserService } from './user/user.service';
 
 
 
@@ -26,10 +26,10 @@ import { UserService } from './user.service';
     BrowserModule,
     CoreModule,
     AppRoutingModule,
-    UserModule,
-    ApartmentsModule,
     HttpClientModule,
     SharedModule,
+    UserModule,
+    ApartmentsModule,
     NotFoundRoutingModule
   ],
   providers: [

@@ -1,4 +1,4 @@
-const authController = require('./auth');
+const authController = require('./authController');
 const apartmentController = require('./apartmentController');
 const postController = require('./postController');
 

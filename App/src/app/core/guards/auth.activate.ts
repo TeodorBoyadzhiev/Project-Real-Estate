@@ -13,10 +13,8 @@ export class AuthActivate implements CanActivate {
 
 
 
-        if (authenticationRequired === this.userService.isLogged) {
-            console.log('Are de')
-            return true;
-        }
+        if (authenticationRequired === this.userService.isLogged)
+        { return true; }
 
         console.log(authenticationRequired, 'proba')
         console.log(this.userService.isLogged, 'druga proba')

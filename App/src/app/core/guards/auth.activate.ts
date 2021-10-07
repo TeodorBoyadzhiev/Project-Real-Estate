@@ -16,10 +16,10 @@ export class AuthActivate implements CanActivate {
         if (authenticationRequired === this.userService.isLogged)
         { return true; }
 
-        console.log(authenticationRequired, 'proba')
-        console.log(this.userService.isLogged, 'druga proba')
-        console.log(authenticationRequired === 'boolean', '=====>', authenticationRequired, '=====>', route.data)
-        console.log(Boolean(authenticationRequired) === Boolean(this.userService.isLogged), 'molq')
+        // console.log(authenticationRequired, 'proba')
+        // console.log(this.userService.isLogged, 'druga proba')
+        // console.log(authenticationRequired === 'boolean', '=====>', authenticationRequired, '=====>', route.data)
+        // console.log(Boolean(authenticationRequired) === Boolean(this.userService.isLogged), 'molq')
 
         let authRedirectUrl = authenticationFailureRedirectUrl;
 

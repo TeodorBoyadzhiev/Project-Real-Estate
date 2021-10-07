@@ -16,6 +16,8 @@ export class ProfileComponent {
 
   isLoading = true;
 
+
+
   get user() {
     return this.userService.user;
   }
@@ -25,7 +27,7 @@ export class ProfileComponent {
   ) {
     this.userService.getProfileInfo().subscribe(user => {
       this.isLoading = false,
-      this.rentedApartments = user.rentedApartments
+        this.rentedApartments = user.rentedApartments
     });
   }
 

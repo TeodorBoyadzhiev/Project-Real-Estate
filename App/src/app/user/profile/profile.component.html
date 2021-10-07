@@ -47,14 +47,13 @@
         </div>
       </div>
     </ng-container>
-    
-    <ng-container *ngIf="!rentedApartments" class="empty">
-      <div class="empty">
-        No apartments yet. Start searching.
-      </div>
-      <button type="button" class="btn" routerLink="/apartments">Catalog</button>
-    </ng-container>
-    
   </div>
+
+  <ng-container *ngIf="!rentedApartments" class="empty">
+    <div class="emptyDiv">
+      No apartments yet. Start searching.
+    </div>
+    <button type="button" class="btn" routerLink="/apartments">Catalog</button>
+  </ng-container>
 
 </div>

@@ -10,7 +10,6 @@ export class UserService {
   user: IUser | null | undefined;
 
   get isLogged(): boolean {
-    console.log(!!this.user)
     return !!this.user;
   }
 

@@ -12,20 +12,17 @@ export class ProfileComponent {
 
   rentedApartments?: IApartment[] = [];
 
-
   inUpdateMode = false;
 
+  get user() {
+    return this.userService.user;
+  }
 
   get rentedApartment() {
     if (this.rentedApartments!.length < 1) {
       return false;
     }
     return true;
-  }
-
-
-  get user() {
-    return this.userService.user;
   }
 
   constructor(
@@ -35,6 +32,8 @@ export class ProfileComponent {
       this.rentedApartments = user.rentedApartments
     });
   }
+
+  
 
 
   updateProfile(form: NgForm): void {

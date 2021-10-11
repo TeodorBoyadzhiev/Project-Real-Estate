@@ -29,9 +29,6 @@ export class CatalogComponent implements OnInit{
       this.ngOnInit();
     } else {
       this.apartments = this.apartments!.filter(res => {
-        if (!this.description.toLocaleLowerCase()) {
-         return this.apartments = undefined
-        }
         return res.description.toLocaleLowerCase().match(this.description.toLocaleLowerCase())
       })
     }

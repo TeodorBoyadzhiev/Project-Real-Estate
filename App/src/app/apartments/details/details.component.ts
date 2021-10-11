@@ -15,7 +15,7 @@ export class DetailsComponent {
   recentComments: IComment[] | undefined;
 
   get isOwner(): boolean {
-    return this.apartment?.userId._id == this.userService.user?._id
+    return this.apartment?.userId?._id == this.userService.user?._id
   }
 
   get isRented() {

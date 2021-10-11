@@ -32,7 +32,7 @@
   </div>
 
   <h1>Your choices:</h1>
-  <div class="user-rented">
+  <div class="user-rented" *ngIf="user">
     <!-- // IF HAS RENTED APARTMETS -->
     <ng-container *ngIf="rentedApartment" class="apartment">
 
@@ -47,13 +47,16 @@
         </div>
       </div>
     </ng-container>
+    
+    <ng-container *ngIf="!rentedApartment" class="empty">
+      <div class="emptyDiv">
+        No apartments yet. Start searching.
+      </div>
+      <button type="button" class="btn" routerLink="/apartments">Catalog</button>
+    </ng-container>
   </div>
 
-  <ng-container *ngIf="!rentedApartment" class="empty">
-    <div class="emptyDiv">
-      No apartments yet. Start searching.
-    </div>
-    <button type="button" class="btn" routerLink="/apartments">Catalog</button>
-  </ng-container>
+<div class="loader" *ngIf="!user">Loading...</div>
+
 
 </div>

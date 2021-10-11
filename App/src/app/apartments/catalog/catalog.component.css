@@ -1,3 +1,5 @@
+
+
 .img-container {
   text-align: center;
   justify-content: center;
@@ -90,13 +92,23 @@
 .btn:hover {
   background-color: rgb(216, 216, 216);
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .items {
   text-align: left;
 }
 
-.apartments-notFound {
+
+
+.apartments-notFound{
+  margin: auto;
+  height: 550px;
+  width: 550px;
   justify-content: center;
   align-items: center;
+}
+
+.apartments-notFound p {
+  font-size: 20px;
 }

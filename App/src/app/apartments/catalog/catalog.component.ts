@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../../content.service';
+import { ContentService } from '../../shared/services/content.service';
 import { IApartment } from '../../shared/interfaces';
 
 @Component({
@@ -29,6 +29,9 @@ export class CatalogComponent implements OnInit{
       this.ngOnInit();
     } else {
       this.apartments = this.apartments!.filter(res => {
+        if (!this.description.toLocaleLowerCase()) {
+         return this.apartments = undefined
+        }
         return res.description.toLocaleLowerCase().match(this.description.toLocaleLowerCase())
       })
     }

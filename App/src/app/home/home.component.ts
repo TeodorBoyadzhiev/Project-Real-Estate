@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContentService } from '../content.service';
+import { ContentService } from '../shared/services/content.service';
 import { IApartment } from '../shared/interfaces';
 
 @Component({

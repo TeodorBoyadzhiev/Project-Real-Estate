@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { sameValueAsFactory } from '../../shared/validators';
-import { UserService } from '../../user/user.service';
+import { UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -15,6 +15,7 @@ export class RegisterComponent implements OnDestroy {
   killSubscription = new Subject();
 
   form!: FormGroup;
+  error?: string | '';
 
   constructor(
     private fb: FormBuilder,
@@ -37,10 +38,11 @@ export class RegisterComponent implements OnDestroy {
     if (this.form.invalid) { return; }
     this.userService.register(this.form.value).subscribe({
       next: () => {
+        this.error = '';
         this.router.navigate(['/']);
       },
       error: (err) => {
-        console.log(err);
+        this.error = err.error.message
       }
     })
   }

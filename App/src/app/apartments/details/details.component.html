@@ -12,7 +12,7 @@
             <li><span>Price: </span>{{apartment?.price}}$</li>
           </ul>
 
-          <p class="rented" *ngIf="isRented">This apartment is already rented?</p>
+          <p class="rented" *ngIf="isRented">This apartment is already rented!</p>
           <button routerLink="/apartments" class="btn">Back to Catalog</button>
 
           <ng-container *ngIf="isOwner">

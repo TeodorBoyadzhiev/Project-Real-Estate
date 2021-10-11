@@ -1,11 +1,11 @@
 <div class="apartments-notFound" *ngIf="!apartments">
-  No apartments found!
+  <p>No apartments found!</p>
 </div>
 <div id="img-container" *ngIf="apartments">
   <main class="wrapper">
 
     <div class="search-wraper">
-      <div class="search" >
+      <div class="search">
         <input type="text" class="search-input" name="description" [(ngModel)]="description" (ngModelChange)="Search()"
           placeholder="Search by description here">
         <!-- <input type="submit" class="search-submit" value="Search"> -->

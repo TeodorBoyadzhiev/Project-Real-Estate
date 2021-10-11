@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { UserService } from '../user.service';
+import { UserService } from '../../shared/services/user.service';
 import { IApartment } from '../../shared/interfaces';
 
 @Component({
@@ -10,12 +10,18 @@ import { IApartment } from '../../shared/interfaces';
 })
 export class ProfileComponent {
 
-  rentedApartments: IApartment[] | undefined;
+  rentedApartments?: IApartment[] = [];
+
 
   inUpdateMode = false;
 
-  isLoading = true;
 
+  get rentedApartment() {
+    if (this.rentedApartments!.length < 1) {
+      return false;
+    }
+    return true;
+  }
 
 
   get user() {
@@ -26,8 +32,7 @@ export class ProfileComponent {
     private userService: UserService
   ) {
     this.userService.getProfileInfo().subscribe(user => {
-      this.isLoading = false,
-        this.rentedApartments = user.rentedApartments
+      this.rentedApartments = user.rentedApartments
     });
   }
 

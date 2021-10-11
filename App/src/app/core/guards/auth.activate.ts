@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable } from "rxjs";
-import { UserService } from "../../user/user.service";
+import { UserService } from "../../shared/services/user.service";
 
 @Injectable()
 export class AuthActivate implements CanActivate {
@@ -16,15 +16,9 @@ export class AuthActivate implements CanActivate {
         if (authenticationRequired === this.userService.isLogged)
         { return true; }
 
-        // console.log(authenticationRequired, 'proba')
-        // console.log(this.userService.isLogged, 'druga proba')
-        // console.log(authenticationRequired === 'boolean', '=====>', authenticationRequired, '=====>', route.data)
-        // console.log(Boolean(authenticationRequired) === Boolean(this.userService.isLogged), 'molq')
-
         let authRedirectUrl = authenticationFailureRedirectUrl;
 
         if (authenticationRequired) {
-            console.log(route.url)
             const loginRedirectUrl = route.url.reduce((acc, s) => `${acc}/${s.path}`, '');
 
             authRedirectUrl += `?redirectUrl=${loginRedirectUrl}`;

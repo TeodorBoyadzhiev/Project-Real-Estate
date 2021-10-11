@@ -1,4 +1,9 @@
 <div>
+  <div *ngIf="error" class="error" hidden>
+    <p>{{error}}</p>
+  </div>
+
+
   <form #form="ngForm" class="login" action="" method="post" (ngSubmit)="login(form)">
     <h2>Login Form</h2>
     <fieldset class="box">

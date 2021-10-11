@@ -34,7 +34,7 @@
   <h1>Your choices:</h1>
   <div class="user-rented">
     <!-- // IF HAS RENTED APARTMETS -->
-    <ng-container *ngIf="rentedApartments" class="apartment">
+    <ng-container *ngIf="rentedApartment" class="apartment">
 
       <div *ngFor="let apartment of rentedApartments">
         <div class="apartment">
@@ -49,7 +49,7 @@
     </ng-container>
   </div>
 
-  <ng-container *ngIf="!rentedApartments" class="empty">
+  <ng-container *ngIf="!rentedApartment" class="empty">
     <div class="emptyDiv">
       No apartments yet. Start searching.
     </div>

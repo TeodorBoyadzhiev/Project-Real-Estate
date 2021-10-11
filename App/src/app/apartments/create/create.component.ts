@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ContentService } from '../../content.service';
+import { ContentService } from '../../shared/services/content.service';
 
 @Component({
   selector: 'app-create',

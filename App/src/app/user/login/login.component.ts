@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {
+export class LoginComponent {
 
- 
+  error?: string | '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
-    private router:Router
+    private router: Router
   ) { }
 
-  login(form: NgForm):void {
+  login(form: NgForm): void {
     if (form.invalid) { return; }
     const { email, password } = form.value;
     this.userService.login({ email, password }).subscribe({
@@ -27,8 +27,9 @@ export class LoginComponent  {
         this.router.navigate([redirectUrl]);
       },
       error: (err) => {
-        console.log(err);
+        this.error = err.error.message;
+
       }
     })
- }
+  }
 }

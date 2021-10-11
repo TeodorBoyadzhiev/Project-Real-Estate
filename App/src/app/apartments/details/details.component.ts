@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContentService } from '../../content.service';
-import { UserService } from '../../user/user.service';
+import { ContentService } from '../../shared/services/content.service';
+import { UserService } from '../../shared/services/user.service';
 import { IApartment, IComment } from '../../shared/interfaces';
 
 @Component({
